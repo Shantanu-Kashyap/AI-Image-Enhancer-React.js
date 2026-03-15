@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = "wxju1lxlafz95c0ox";
-const BASE_URL = "https://techhk.aoscdn.com";
+const API_KEY = import.meta.env.VITE_API_KEY;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const enhancedImageAPI = async (file) => {
   try {
@@ -49,7 +49,7 @@ const pollForEnhancedImage = async (taskId, retries = 0) => {
   try {
     const url = await fetchEnhancedImage(taskId);
     return url;
-  } catch (error) {
+  } catch {
     if (retries >= 10) {
       throw new Error("Max retries reached. Try again later.");
     }

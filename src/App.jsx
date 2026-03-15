@@ -3,22 +3,31 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 px-4 py-10'>
-      <div className='text-center mb-10'>
-        <h1 className='text-5xl font-extrabold text-gray-800 tracking-tight drop-shadow-md'>
-          AI Image Enhancer
-        </h1>
-        <p className='mt-3 text-lg text-gray-600'>
-          Upload your image and let AI enhance it in seconds!
-        </p>
+    <div className='relative min-h-screen overflow-hidden px-4 py-10 text-slate-900 md:px-8'>
+      <div className='bg-orb bg-orb-one' />
+      <div className='bg-orb bg-orb-two' />
+
+      <div className='relative mx-auto flex w-full max-w-6xl flex-col'>
+        <header className='mb-10 md:mb-12'>
+          <p className='inline-flex rounded-full border border-slate-900/15 bg-white/60 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-slate-700 backdrop-blur'>
+            Beast Mode Enhancer
+          </p>
+
+          <h1 className='mt-4 max-w-4xl text-4xl font-black leading-tight tracking-tight text-slate-900 md:text-6xl'>
+            Turn ordinary photos into razor-sharp masterpieces
+          </h1>
+
+          <p className='mt-4 max-w-2xl text-base font-medium text-slate-600 md:text-lg'>
+            Upload once, enhance instantly, and download your premium result with one click.
+          </p>
+        </header>
+
+        <Home />
+
+        <footer className='mt-10 border-t border-slate-900/10 pt-5 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500'>
+          Powered by ShantanuAI
+        </footer>
       </div>
-
-      <Home />
-
-      {/* Footer */}
-      <footer className='mt-10 text-sm text-gray-500'>
-        Powered by <span className='font-semibold text-gray-700'>@ShantanuAI</span>
-      </footer>
     </div>
   );
 }
